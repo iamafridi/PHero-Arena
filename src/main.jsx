@@ -14,6 +14,8 @@ import Shop from './pages/Shop/Shop';
 import Features from './pages/Features/Features';
 import AboutUs from './pages/Services/AboutUs';
 import AuthProvider from './routes/AuthProvider';
+import PrivateRoute from './routes/PrivateRoute';
+import Hackathon from './pages/Hackathon/Hackathon';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +44,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/features",
-        element: <Features></Features>
+        element: <PrivateRoute><Features></Features></PrivateRoute>
+      },
+      {
+        path: "/hackathon",
+        element: <PrivateRoute><Hackathon></Hackathon></PrivateRoute>
       }
     ]
   },
