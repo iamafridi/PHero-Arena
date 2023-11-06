@@ -17,8 +17,12 @@ const Navbar = () => {
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/shop">Shop</NavLink></li>
     <li><NavLink to="/about">About Us</NavLink></li>
-    <li><NavLink to="/features">Features</NavLink></li>
-    <li><NavLink to="/hackathon">Hackathon</NavLink></li>
+    {user &&
+      <>
+        <li><NavLink to="/features">Features</NavLink></li>
+        <li><NavLink to="/hackathon">Hackathon</NavLink></li>
+      </>
+    }
 
 
     {/* <li><NavLink to="/login">Login</NavLink></li>
@@ -47,7 +51,7 @@ const Navbar = () => {
       <div className="navbar-end items-center justify-center" >
         {
           user ? <>
-            <span className="mr-3 border p-3 border-black rounded-es-full rounded-se-full hover:bg-slate-700 hover:text-yellow-200 ">{user.email}</span>
+            <span className="mr-3 border p-3 border-black rounded-es-full rounded-se-full hover:bg-slate-700 hover:text-yellow-200 ">{user.displayName}</span>
             <button onClick={handleLogOut} className="btn btn-group btn-ghost text-black border border-slate-950 rounded-se-full rounded-es-full  hover:bg-slate-800 hover:text-white">Logout</button>
 
           </>

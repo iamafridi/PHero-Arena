@@ -1,14 +1,15 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/firebase.config";
 import { AuthContext } from "../../routes/AuthProvider";
 
 const Login = () => {
-    const {loginUser} =useContext(AuthContext)
+    const {loginUser ,signInWithGoogle} =useContext(AuthContext)
     const [loginError, setLoggingError] =useState('');
     const [logingSuccessful, setLoginSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate =useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -25,6 +26,8 @@ const Login = () => {
         .then(result => {
                     console.log(result.user);
                     setLoginSuccess('User Logged In Successfully')
+                    e.target.reset()
+                    navigate("/");
                 })
                 .catch(error => {
                     console.error(error);
@@ -49,6 +52,15 @@ const Login = () => {
 
     }
 
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.error(error);
+        })
+    }
 
 
     return (
@@ -132,7 +144,7 @@ const Login = () => {
                         <div className="flex items-center justify-between">
                             <p className="text-sm text-gray-500">
                                 No account?
-                                <Link to="/register"> <a className="underline ml-2 font-bold text-blue-600" href="">Register</a></Link>
+                                <Link to="/register"> <button className="underline ml-2 font-bold text-blue-600" href="">Register</button></Link>
                             </p>
 
                             <button
@@ -142,6 +154,7 @@ const Login = () => {
                                 Log in
                             </button>
                         </div>
+                        <p className="text-end "><button onClick={handleGoogleSignIn} className="btn btn-sm btn-ghost text-[#F5E8C7] bg-blue-600 rounded-2xl ">Google</button></p>
                     </form>
                     {
                         loginError && <p className="text-red-600">{loginError}</p>
