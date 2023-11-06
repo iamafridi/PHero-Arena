@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -59,13 +60,13 @@ const Login = () => {
 
                             <div className="relative">
                                 <input
-                                    type="password"
+                                    type={showPassword ? "text" : "password"}
                                     className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                     placeholder="Enter Your Password"
                                     name="password" required
                                 />
 
-                                <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+                                <span onClick={() => setShowPassword(!showPassword)} className="absolute inset-y-0 end-0 grid place-content-center px-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-4 w-4 text-gray-400"
