@@ -1,9 +1,13 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import auth from "../../Firebase/firebase.config";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../routes/AuthProvider";
+// import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
+    const { createUser } = useContext(AuthContext)
+
     const [registerError, setRegisterError] = useState('');
     const [registerSuccess, setRegisterSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -17,20 +21,12 @@ const Register = () => {
         const photo = e.target.photo.value;
         console.log(name, photo, email, password);
 
-        // Password Longer than six characters
-        if (password.length < 6) {
-            setRegisterError('Password should be at least 6 characters or longer')
-        return;
-        }
+         // Reseting Error and success message
+         setRegisterError('');
+         setRegisterSuccess('');
 
-
-
-        // Resrting Error
-        setRegisterError('');
-        setRegisterSuccess('');
-
-        // Creating User 
-        createUserWithEmailAndPassword(auth, email, password)
+        // Creating User with Auth context
+        createUser(email, password)
             .then(result => {
                 console.log(result.user);
                 setRegisterSuccess('User Created Successfully');
@@ -39,6 +35,27 @@ const Register = () => {
                 console.error(error);
                 setRegisterError(error.message)
             })
+
+        // // Password Longer than six characters
+        // if (password.length < 6) {
+        //     setRegisterError('Password should be at least 6 characters or longer')
+        // return;
+        // }
+
+
+
+       
+
+        // // Creating User 
+        // createUserWithEmailAndPassword(auth, email, password)
+        //     .then(result => {
+        //         console.log(result.user);
+        //         setRegisterSuccess('User Created Successfully');
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //         setRegisterError(error.message)
+        //     })
 
 
 
@@ -118,7 +135,7 @@ const Register = () => {
 
                             <div className="relative">
                                 <input
-                                    type={ showPassword ? "text" : "password"}
+                                    type={showPassword ? "text" : "password"}
                                     className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                     placeholder="Enter Your Password"
                                     name="password" required

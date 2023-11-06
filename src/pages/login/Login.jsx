@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import auth from "../../Firebase/firebase.config";
+import { AuthContext } from "../../routes/AuthProvider";
 
 const Login = () => {
+    const {loginUser} =useContext(AuthContext)
+    const [loginError, setLoggingError] =useState('');
+    const [logingSuccessful, setLoginSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = e => {
@@ -9,6 +15,38 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+
+         // Reseting Error and success message
+         setLoggingError('');
+         setLoginSuccess('');
+ 
+        
+        loginUser(email,password)
+        .then(result => {
+                    console.log(result.user);
+                    setLoginSuccess('User Logged In Successfully')
+                })
+                .catch(error => {
+                    console.error(error);
+                    setLoggingError(error.message)
+                })
+
+
+       
+
+        // // Logging In 
+        // // signInWithEmailAndPassword(auth, email, password)
+        //     .then(result => {
+        //         console.log(result.user);
+        //         setLoginSuccess('User Logged In Successfully')
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //         setLoggingError(error.message)
+        //     })
+
+
+
     }
 
 
@@ -105,9 +143,15 @@ const Login = () => {
                             </button>
                         </div>
                     </form>
+                    {
+                        loginError && <p className="text-red-600">{loginError}</p>
+                    }
+                    {
+                        logingSuccessful && <p className="text-green-600">{logingSuccessful}</p>
+                    }
                 </div>
 
-                <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+                <div className="relative h-64 w-full sm:h-96 lg:h-70 lg:w-1/2">
                     <img
                         alt="Welcome"
                         src="https://i.ibb.co/RTLLmTd/login-Page-image.jpg"

@@ -1,7 +1,7 @@
 const Features = () => {
     return (
         <div>
-            features
+            features here
         </div>
     );
 };
