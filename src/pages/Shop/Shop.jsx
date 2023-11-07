@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Shop = () => {
     const handlePurchse = () => {
@@ -25,6 +26,7 @@ const Shop = () => {
                     icon: "success"
                 });
             } else if (
+
                 /* Read more about handling dismissals below */
                 result.dismiss === Swal.DismissReason.cancel
             ) {
@@ -43,19 +45,19 @@ const Shop = () => {
                 <section>
                     <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                         <header>
-                           <div className=" flex justify-between">
-                           <div>
-                                <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                                    Product Collection
-                                </h2>
-                                <p className="max-w-md mt-4 text-gray-500">
-                                    Are you a dedicated gamer looking for the latest and greatest in gaming gear, accessories, and collectibles? Or perhaps you're a casual player in search of a perfect gift for the gamer in your life? Look no further than PHero-Arena, the ultimate haven for all things gaming!
-                                </p>
+                            <div className=" flex justify-between">
+                                <div>
+                                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+                                        Product Collection
+                                    </h2>
+                                    <p className="max-w-md mt-4 text-gray-500">
+                                        Are you a dedicated gamer looking for the latest and greatest in gaming gear, accessories, and collectibles? Or perhaps you are a casual player in search of a perfect gift for the gamer in your life? Look no further than PHero-Arena, the ultimate haven for all things gaming!
+                                    </p>
+                                </div>
+                                <div>
+                                    <Link to="/login">  <button className="btn btn-warning">Login</button></Link>
+                                </div>
                             </div>
-                            <div>
-<Link to="/login">  <button className="btn btn-warning">Login</button></Link>
-                               </div>
-                           </div>
 
                         </header>
 

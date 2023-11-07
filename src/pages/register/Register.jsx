@@ -1,6 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
-import auth from "../../Firebase/firebase.config";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../routes/AuthProvider";
 // import { AuthContext } from "../../Provider/AuthProvider";
@@ -21,9 +19,9 @@ const Register = () => {
         const photo = e.target.photo.value;
         console.log(name, photo, email, password);
 
-         // Reseting Error and success message
-         setRegisterError('');
-         setRegisterSuccess('');
+        // Reseting Error and success message
+        setRegisterError('');
+        setRegisterSuccess('');
 
         // Creating User with Auth context
         createUser(email, password)
@@ -44,7 +42,7 @@ const Register = () => {
 
 
 
-       
+
 
         // // Creating User 
         // createUserWithEmailAndPassword(auth, email, password)

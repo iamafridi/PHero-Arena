@@ -4,18 +4,18 @@ const AboutUs = () => {
 
             <h1 className="text-3xl font-bold text-center border-b-2">**Welcome to Phero-Arena, Where Gaming Dreams Come True!**</h1>
 
-            <p>At Phero-Arena, we're on a mission to create the ultimate gaming hub for players of all skill levels, backgrounds, and interests. Our passion for gaming knows no bounds, and we're dedicated to providing an unparalleled gaming experience that connects, challenges, and entertains.</p>
+            <p>At Phero-Arena, we are on a mission to create the ultimate gaming hub for players of all skill levels, backgrounds, and interests. Our passion for gaming knows no bounds, and we're dedicated to providing an unparalleled gaming experience that connects, challenges, and entertains.</p>
 
             <h3 className="text-2xl font-bold text-center ">**Why Choose Phero-Arena?**</h3>
 
             <p>
-                 **A Diverse Gaming Ecosystem:** Phero-Arena is your portal to a wide array of games, from action-packed shooters and immersive role-playing adventures to sports simulations and indie gems. No matter your gaming taste, we've got something for you.
+                **A Diverse Gaming Ecosystem:** Phero-Arena is your portal to a wide array of games, from action-packed shooters and immersive role-playing adventures to sports simulations and indie gems. No matter your gaming taste, we have got something for you.
 
                 - **Community-Centric:** We believe gaming is better when shared. Join our thriving community of gamers, connect with friends and rivals, and participate in lively discussions, events, and tournaments.
 
                 - **Expert Insights:** Our blog and gaming news section are packed with in-depth game reviews, industry updates, and expert advice. Stay informed and make the most of your gaming experience.
 
-                - **Online Shop:** Looking for the latest gaming gear, accessories, or collectibles? Our online shop features an extensive range of gaming products, ensuring you're always equipped for victory.
+                - **Online Shop:** Looking for the latest gaming gear, accessories, or collectibles? Our online shop features an extensive range of gaming products, ensuring you are always equipped for victory.
 
                 - **Exclusive Events:** Phero-Arena hosts regular gaming events, tournaments, and competitions. Test your skills, claim your bragging rights, and win amazing prizes!
 

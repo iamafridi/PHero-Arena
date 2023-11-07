@@ -1,15 +1,13 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../Firebase/firebase.config";
 import { AuthContext } from "../../routes/AuthProvider";
 
 const Login = () => {
-    const {loginUser ,signInWithGoogle} =useContext(AuthContext)
-    const [loginError, setLoggingError] =useState('');
+    const { loginUser, signInWithGoogle } = useContext(AuthContext)
+    const [loginError, setLoggingError] = useState('');
     const [logingSuccessful, setLoginSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const navigate =useNavigate();
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -17,25 +15,25 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email, password);
 
-         // Reseting Error and success message
-         setLoggingError('');
-         setLoginSuccess('');
- 
-        
-        loginUser(email,password)
-        .then(result => {
-                    console.log(result.user);
-                    setLoginSuccess('User Logged In Successfully')
-                    e.target.reset()
-                    navigate("/");
-                })
-                .catch(error => {
-                    console.error(error);
-                    setLoggingError(error.message)
-                })
+        // Reseting Error and success message
+        setLoggingError('');
+        setLoginSuccess('');
 
 
-       
+        loginUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                setLoginSuccess('User Logged In Successfully')
+                e.target.reset()
+                navigate("/");
+            })
+            .catch(error => {
+                console.error(error);
+                setLoggingError(error.message)
+            })
+
+
+
 
         // // Logging In 
         // // signInWithEmailAndPassword(auth, email, password)
@@ -52,14 +50,14 @@ const Login = () => {
 
     }
 
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         signInWithGoogle()
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.error(error);
-        })
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
 

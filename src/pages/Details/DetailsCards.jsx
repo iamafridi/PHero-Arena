@@ -1,43 +1,43 @@
 import Swal from "sweetalert2";
 
-const DetailsCards = ({events}) => {
+const DetailsCards = ({ events }) => {
 
 
-const handlePurchse = ()=>{
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: "btn btn-success",
-          cancelButton: "btn btn-danger"
-        },
-        buttonsStyling: false
-      });
-      swalWithBootstrapButtons.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Yes, Purchase it!",
-        cancelButtonText: "No, cancel!",
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire({
-            title: "Congratulations!",
-            text: "Your have Purchased Successfully.",
-            icon: "success"
-          });
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire({
-            title: "Cancelled",
-            text: "Your have canceled the order:)",
-            icon: "error"
-          });
-        }
-      });
-}
+    const handlePurchse = () => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+        swalWithBootstrapButtons.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, Purchase it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire({
+                    title: "Congratulations!",
+                    text: "Your have Purchased Successfully.",
+                    icon: "success"
+                });
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire({
+                    title: "Cancelled",
+                    text: "Your have canceled the order:)",
+                    icon: "error"
+                });
+            }
+        });
+    }
 
 
     const { title, offers, description, full_details, price, posted_date, image } = events;

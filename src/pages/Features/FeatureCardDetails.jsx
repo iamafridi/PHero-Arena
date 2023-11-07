@@ -2,15 +2,15 @@ import Swal from "sweetalert2";
 
 const FeatureCardDetails = ({ events }) => {
 
-    const handlePurchse = ()=>{
+    const handlePurchse = () => {
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
-              confirmButton: "btn btn-success",
-              cancelButton: "btn btn-danger"
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
             },
             buttonsStyling: false
-          });
-          swalWithBootstrapButtons.fire({
+        });
+        swalWithBootstrapButtons.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
             icon: "warning",
@@ -18,24 +18,24 @@ const FeatureCardDetails = ({ events }) => {
             confirmButtonText: "Yes, Purchase it!",
             cancelButtonText: "No, cancel!",
             reverseButtons: true
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              swalWithBootstrapButtons.fire({
-                title: "Congratulations!",
-                text: "Your have Purchased Successfully.",
-                icon: "success"
-              });
+                swalWithBootstrapButtons.fire({
+                    title: "Congratulations!",
+                    text: "Your have Purchased Successfully.",
+                    icon: "success"
+                });
             } else if (
-              /* Read more about handling dismissals below */
-              result.dismiss === Swal.DismissReason.cancel
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
             ) {
-              swalWithBootstrapButtons.fire({
-                title: "Cancelled",
-                text: "Your have canceled the order:)",
-                icon: "error"
-              });
+                swalWithBootstrapButtons.fire({
+                    title: "Cancelled",
+                    text: "Your have canceled the order:)",
+                    icon: "error"
+                });
             }
-          });
+        });
     }
 
     const { title, offers, description, full_details, price, posted_date, image } = events;
@@ -91,7 +91,7 @@ const FeatureCardDetails = ({ events }) => {
                             <dd className="text-xl font-bold text-black">{price}$</dd>
                         </div>
                         <button onClick={handlePurchse} className="btn btn-success">Purchase</button>
-                
+
                     </dl>
                 </a>
             </div>
