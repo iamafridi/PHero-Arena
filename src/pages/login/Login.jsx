@@ -164,7 +164,7 @@ const Login = () => {
                     }
                 </div>
 
-                <div className="relative h-64 w-full sm:h-96 lg:h-70 lg:w-1/2">
+                <div className="relative h-64 w-full sm:h-96 lg:h-50 lg:w-1/3">
                     <img
                         alt="Welcome"
                         src="https://i.ibb.co/RTLLmTd/login-Page-image.jpg"

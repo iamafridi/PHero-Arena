@@ -48,7 +48,7 @@ const Navbar = () => {
           {navLink}
         </ul>
       </div>
-      <div className="navbar-end items-center justify-center" >
+      <div className="navbar-end items-center justify-end" >
         {
           user ? <>
             <span className="mr-3 border p-3 border-black rounded-es-full rounded-se-full hover:bg-slate-700 hover:text-yellow-200 ">{user.displayName}</span>

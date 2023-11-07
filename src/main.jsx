@@ -16,6 +16,7 @@ import AboutUs from './pages/Services/AboutUs';
 import AuthProvider from './routes/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute';
 import Hackathon from './pages/Hackathon/Hackathon';
+import DetailsCard from './pages/Details/DetailsCard';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:() => fetch('/event.json')
+      },
+      {
+        path: "/event/:id",
+        element:<DetailsCard></DetailsCard>,
+        loader:() => fetch('/event.json')
+
       },
       {
         path: "/login",
@@ -44,7 +52,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/features",
-        element: <PrivateRoute><Features></Features></PrivateRoute>
+        element: <PrivateRoute><Features></Features></PrivateRoute>,
+        loader: ()=> fetch('/event.json')
       },
       {
         path: "/hackathon",

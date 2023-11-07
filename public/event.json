@@ -1,0 +1,64 @@
+ [
+      {
+        "id": 1,
+        "title": "Battle of the Champions",
+        "description": "Prepare for an epic showdown in the Battle of the Champions! This event brings together the top players from around the world to compete for glory and fantastic prizes. Whether you're a seasoned pro or a rookie, this is your chance to prove your skills and make a name for yourself on the grand stage of Phero-Arena.",
+        "full_details": "The Battle of the Champions is a high-stakes tournament that spans multiple days of intense competition. Players will engage in various game modes and face off against formidable opponents. The event features a bracket-style competition, with exciting matches, live commentary, and thrilling moments. With a diverse range of games, this event is perfect for gamers of all genres.",
+        "price": 19.99,
+        "offers": "Early bird registration discounts available for a limited time. Exclusive in-game cosmetics and rewards for participants. Prizes include cash rewards, gaming peripherals, and more.",
+        "image": "https://i.ibb.co/mHpmd4F/feature6.jpg",
+        "posted_date": "2023-11-15"
+      },
+      {
+        "id": 2,
+        "title": "Phero-Arena League Season 3",
+        "description": "Get ready for the most exciting season of the Phero-Arena League yet! Season 3 is here with even more action, drama, and unforgettable moments. Join a team, strategize, and climb the rankings in this thrilling esports competition.",
+        "full_details": "Phero-Arena League Season 3 will feature multiple divisions, allowing players of all skill levels to participate. Whether you're a casual player or aiming for the top, there's a place for you in this competitive league. Matches will be streamed live, and viewers can expect top-tier gameplay and commentary.",
+        "price": 14.99,
+        "offers": "Early bird team registration discounts available. Prizes include championship titles, in-game items, and sponsor-provided gaming gear.",
+        "image": "https://i.ibb.co/LdgxXLy/feature2.jpg",
+        "posted_date": "2023-12-01"
+      },
+      {
+        "id": 3,
+        "title": "Phero-Con 2023",
+        "description": "The ultimate gaming convention is back! Phero-Con 2023 is the perfect place for gamers to come together, celebrate their passion, and experience the latest in the gaming world. This event offers a wide array of activities, from cosplay competitions to hands-on gaming demos.",
+        "full_details": "Phero-Con 2023 will feature an expansive exhibit hall with booths from major gaming companies, indie developers, and hardware manufacturers. Attendees can try out upcoming games, attend panel discussions with industry experts, and take part in various tournaments. It's the ultimate celebration of gaming culture.",
+        "price": 24.99,
+        "offers": "Early bird tickets come with exclusive access to select panels and a limited-edition Phero-Con t-shirt. Attendees can win exciting prizes through various gaming competitions and giveaways.",
+        "image": "https://i.ibb.co/7tJ4bc6/feature3.jpg",
+        "posted_date": "2023-10-20"
+      },
+      {
+        "id": 4,
+        "title": "Phero-Arena Mobile Championship",
+        "description": "Mobile gaming enthusiasts, unite! The Phero-Arena Mobile Championship is your chance to shine in the world of mobile gaming. Compete in your favorite mobile titles and prove your skills on a global stage.",
+        "full_details": "This championship will include popular mobile games from a variety of genres, ensuring there's something for every mobile gamer. The competition will be fierce, and the prizes will be enticing. Join the ranks of elite mobile gamers and show the world what you're made of.",
+        "price": 9.99,
+        "offers": "Early bird registration discounts available. Prizes include cash rewards, in-game currency, and mobile gaming accessories.",
+        "image": "https://i.ibb.co/TTphKV9/feature4.jpg",
+        "posted_date": "2023-11-25"
+      },
+      {
+        "id": 5,
+        "title": "Retro Gaming Revival Night",
+        "description": "Take a nostalgic journey back in time with the Retro Gaming Revival Night. This event celebrates the classic games that started it all, and it's a blast from the past you won't want to miss.",
+        "full_details": "Retro Gaming Revival Night will feature a collection of iconic retro games, including arcade classics, console hits, and vintage PC titles. Relive the golden age of gaming and challenge your friends in friendly competitions. Cosplay as your favorite retro game characters for a chance to win prizes!",
+        "price": 12.99,
+        "offers": "Admission grants you unlimited access to all retro game stations. Best retro gaming cosplay wins a special retro-themed prize pack.",
+        "image": "https://i.ibb.co/1QmLgtY/feature5.jpg ",
+        "posted_date": "2023-12-10"
+      },
+      {
+        "id": 6,
+        "title": "Phero-Arena Esports Academy",
+        "description": "Level up your esports skills with the Phero-Arena Esports Academy! Whether you're an aspiring pro gamer or looking to improve your gameplay, our academy offers expert coaching and training programs to help you reach your full potential.",
+        "full_details": "The Phero-Arena Esports Academy provides coaching in popular esports titles, covering game mechanics, strategy, teamwork, and more. Our experienced coaches have a track record of success in the esports world and will work with you to enhance your skills. Join our academy and elevate your gameplay to the next level.",
+        "price": 49.99,
+        "offers": "Enroll in our academy and receive a free gaming gear bundle. Ongoing access to coaching sessions and resources for enrolled students.",
+        "image": "https://i.ibb.co/PWrDf1h/feature1.jpg",
+        "posted_date": "2023-11-05"
+      }
+    ]
+
+  
