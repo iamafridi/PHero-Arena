@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../routes/AuthProvider";
+import { FaGamepad } from 'react-icons/fa';
 
 const Navbar = () => {
 
@@ -41,7 +42,7 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <Link to="/"><button className="btn btn-sm btn-ghost uppercase text-xl font-cormorant font-semibold">PHero-Arena</button></Link>
+        <Link to="/"><button className="btn btn-sm btn-ghost uppercase text-xl font-cormorant font-semibold"><FaGamepad></FaGamepad> PHero-Arena</button></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

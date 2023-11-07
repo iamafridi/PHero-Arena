@@ -142,7 +142,7 @@ const Login = () => {
                         </div>
 
                         <div className="flex items-center justify-between">
-                            <p className="text-sm text-gray-500">
+                            <p className="text-xl  text-gray-500">
                                 No account?
                                 <Link to="/register"> <button className="underline ml-2 font-bold text-blue-600" href="">Register</button></Link>
                             </p>
